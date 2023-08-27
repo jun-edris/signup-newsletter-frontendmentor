@@ -1,0 +1,57 @@
+@use "../utils" as util;
+
+html {
+  box-sizing: border-box;
+  font-size: 100%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  font-family: util.$font;
+}
+
+button {
+  position: relative;
+  background: var(--secondary-color);
+  color: white;
+  padding: 22px;
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 0.92rem;
+  font-weight: bold;
+  margin: 12px 0;
+  cursor: pointer;
+
+  &:hover {
+    transition: 0.3s;
+    background: linear-gradient(
+      50deg,
+      util.$anotherColor 50%,
+      var(--primary-color) 45%
+    );
+    box-shadow: 0 15px 40px var(--primary-color);
+  }
+}
+
+.attribution {
+  margin-top: 25px;
+  font-size: 11px;
+  text-align: center;
+  color: white;
+  padding: 15px;
+  @media (max-width: 830px) {
+    color: var(--secondary-color);
+    margin-top: 25px;
+  }
+}
+.attribution a {
+  color: var(--primary-color);
+}

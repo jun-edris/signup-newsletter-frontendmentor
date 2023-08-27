@@ -1,0 +1,9 @@
+@use "../utils" as util;
+
+:root {
+  --primary-color: #{util.$primaryColor};
+  --secondary-color: #{util.$secondaryColor};
+  --tertiary-color: #{util.$tertiaryColor};
+  --grey-color: #{util.$greyColor};
+  --another-color: #{util.$anotherColor};
+}

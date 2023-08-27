@@ -1,0 +1,218 @@
+@forward "globals";
+@forward "layout";
+
+body {
+  @media (min-width: 830px) {
+    background-color: var(--secondary-color);
+  }
+}
+
+.form__container,
+.success__container {
+  background-color: white;
+
+  @media (min-width: 830px) {
+    border-radius: 1.7rem;
+  }
+}
+
+.form__container {
+  display: grid;
+  position: relative;
+  grid-template-columns: 1fr;
+  grid-template-rows: 0.7fr 1fr;
+  max-width: 920px;
+
+  @media (min-width: 830px) {
+    align-content: center;
+    grid-template-columns: 1.1fr 0.9fr;
+    grid-template-rows: auto;
+    padding: 20px;
+    column-gap: 20px;
+  }
+
+  div:first-child {
+    align-self: center;
+    padding: 2.24rem 1.5rem 0 1.5rem;
+
+    @media (min-width: 830px) {
+      padding: 3.5rem 2.5rem;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 1.5rem;
+
+      @media (min-width: 830px) {
+        font-size: 3.5rem;
+        margin-bottom: 1rem;
+      }
+    }
+
+    div {
+      p {
+        margin: 1rem 0;
+      }
+      ul {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        color: var(--secondary-color);
+        padding-left: 0;
+
+        li {
+          display: flex;
+          align-items: start;
+          margin-bottom: 0.7rem;
+          line-height: 1.5;
+
+          &:before {
+            content: url(/assets/images/icon-list.svg);
+            align-self: start;
+            margin-right: 1rem;
+            height: 21px;
+
+            @media (min-width: 830px) {
+              align-self: center;
+            }
+          }
+        }
+      }
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+
+      div {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0;
+        label {
+          font-size: 0.9rem;
+          font-weight: bold;
+        }
+        span {
+          display: none;
+          color: var(--another-color);
+          font-size: 0.9rem;
+          font-weight: bold;
+        }
+      }
+
+      input {
+        padding: 17px 20px 17px 23px;
+        border: 1px solid var(--grey-color);
+        margin: 12px 0px;
+        border-radius: 0.5rem;
+        font-size: 0.95rem;
+        &::placeholder {
+          color: var(--grey-color);
+          font-size: 0.95rem;
+        }
+        &:focus {
+          outline: 1px solid black;
+          transition: 0.2s ease-in-out;
+        }
+
+        &.error {
+          color: var(--another-color);
+          transition: 0.2s ease-in-out;
+          border: 1px solid var(--another-color);
+          background-color: rgb(255, 92, 105, 0.1);
+          &::placeholder {
+            color: var(--another-color);
+          }
+        }
+      }
+    }
+  }
+
+  > div:not(:first-child) {
+    grid-column-start: 1;
+    grid-row-start: 1;
+    grid-row-end: 1;
+    grid-column-end: -2;
+    background-image: url(../assets/images/illustration-sign-up-mobile.svg);
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    background-repeat: no-repeat;
+    border-bottom-left-radius: 1.2rem;
+    border-bottom-right-radius: 1.2rem;
+
+    @media (min-width: 830px) {
+      background-size: cover;
+      background-position: center;
+      background-image: url(../assets/images/illustration-sign-up-desktop.svg);
+      border-radius: 0.9rem;
+      grid-column-start: 2;
+      grid-row-start: 1;
+      grid-column-end: -2;
+    }
+  }
+}
+
+.success__container {
+  width: 100%;
+  min-height: 90vh;
+  padding: 25px;
+  display: grid;
+  grid-template-rows: 1.5fr 0.5fr;
+  grid-template-columns: 1fr;
+  align-items: center;
+
+  @media (min-width: 830px) {
+    display: block;
+    padding: 40px 50px;
+    min-height: 100%;
+    flex-grow: 1;
+    max-width: 480px;
+  }
+
+  > div:first-child {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    img {
+      height: 55px;
+      width: 55px;
+      margin: 15px 0;
+
+      @media (min-width: 830px) {
+        margin: 0;
+      }
+    }
+    h2 {
+      font-size: 2.7rem;
+      margin: 25px 0 20px;
+
+      @media (min-width: 830px) {
+        font-size: 3rem;
+      }
+    }
+
+    p {
+      line-height: 1.7;
+
+      a {
+        font-weight: bold;
+        color: var(--secondary-color);
+      }
+    }
+  }
+
+  div:not(:first-child) {
+    display: grid;
+    align-self: end;
+    @media (min-width: 830px) {
+    }
+    button {
+      margin-top: 15px;
+      width: 100%;
+    }
+  }
+}

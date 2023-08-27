@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="/dist/style.min.css" />
+    <title>
+      Frontend Mentor | Newsletter sign-up form with success message
+    </title>
+  </head>
+  <body class="grid">
+    <main>
+      <section class="form__container">
+        <!-- Sign-up form start -->
+        <div>
+          <h1>Stay updated!</h1>
+          <div class="content">
+            <p>Join 60,000+ product managers receiving monthly updates on:</p>
+            <ul>
+              <li>Product discovery and building what matters</li>
+              <li>Measuring to ensure updates are a success</li>
+              <li>And much more!</li>
+            </ul>
+          </div>
+
+          <form action="" onsubmit="handleSubmit(event)">
+            <div>
+              <label for="email">Email address</label>
+              <span id="errorEmail">Valid email required</span>
+            </div>
+            <input
+              type="text"
+              id="email"
+              name="email"
+              placeholder="email@company.com"
+            />
+            <button type="submit">Subscribe to monthly newsletter</button>
+          </form>
+        </div>
+        <div></div>
+        <!-- Sign-up form end -->
+      </section>
+      <!-- Success message start -->
+      <section class="success__container">
+        <div>
+          <img
+            src="./assets/images/icon-success.svg"
+            alt="Success illustration"
+          />
+          <h2>Thanks for subscribing!</h2>
+          <p>
+            A confirmation email has been sent to
+            <a>ash@loremcompany.com</a>.Please open it and click the button
+            inside to confirm your subscription.
+          </p>
+        </div>
+        <div>
+          <button type="button" id="dismissBtn">Dismiss message</button>
+        </div>
+      </section>
+      <!-- Success message end -->
+      <div class="attribution">
+        Challenge by
+        <a
+          href="https://www.frontendmentor.io?ref=challenge"
+          target="_blank"
+          rel="noopener"
+          >Frontend Mentor</a
+        >. Coded by
+        <a href="https://github.com/jun-edris" target="_blank" rel="noopener"
+          >Junaire Edris Buico</a
+        >.
+      </div>
+    </main>
+
+    <script src="/js/index.js"></script>
+  </body>
+</html>
